@@ -240,10 +240,10 @@ function App() {
   return (
     <div className="App">
       <h1>ChunkViz v0.1</h1>
-      <p>Language Models do better when they're focused.语言模型在专注时表现更好。</p>
-      <p>One strategy is to pass a relevant subset (chunk) of your full data. There are many ways to chunk text.一种策略是传递您完整数据的相关子集（块）。这里有许多分块文本的方法。</p>
-      <p>This is an tool to understand different chunking/splitting strategies.这是一个了解不同分块/分割策略的工具。</p>
-      <p><a href='#explanation'>Explain like I'm 5...就像我有5岁一样解释...</a></p>
+      <p>Language Models do better when they're focused.</p>
+      <p>One strategy is to pass a relevant subset (chunk) of your full data. There are many ways to chunk text.</p>
+      <p>This is an tool to understand different chunking/splitting strategies.</p>
+      <p><a href='#explanation'>Explain like I'm 5...</a></p>
       <div className='textArea'>
         <textarea value={text} onChange={handleTextChange} rows={10} cols={50} />
         <div className='uploadButtonArea'>
@@ -315,15 +315,15 @@ function App() {
       </div>
       <hr style={{ width: '75%', marginTop: '15px' }} />
       <div id='info_box'>
-        <h3 id="explanation">What's going on here?这里发生了什么？</h3>
-        <p>Language Models have context windows. This is the length of text that they can process in a single pass.语言模型有上下文窗口。这是它们可以在单次处理中处理的文本长度。<br /> Although context lengths are getting larger, it has been shown that language models increase performance on tasks when they are given less (but more relevant) information.尽管上下文长度越来越大，但已经证明当语言模型获得更少（但更相关）的信息时，它们在任务上的性能会提高。</p>
-        <p>But which relevant subset of data do you pick? This is easy when a human is doing it by hand, but turns out it is difficult to instruct a computer to do this.但你会选择哪个相关的数据子集？当人类手动操作时很容易，但事实证明，指导计算机这样做很困难。</p>
-        <p>One common way to do this is by chunking, or subsetting, your large data into smaller pieces. In order to do this you need to pick a chunk strategy.其中一种常见的方法是通过将大型数据分块或分成更小的片段来完成。为了做到这一点，你需要选择一个分块策略。</p>
-        <p>Pick different chunking strategies above to see how they impact the text, add your own text if you'd like.选择以上不同的分块策略来看看它们对文本的影响，如果你愿意，可以添加自己的文本。</p>
-        <p>You'll see different colors that represent different chunks.你会看到代表不同分块的不同颜色。 <span style={{ background: "#ff70a6" }}>This could be chunk 1. </span><span style={{ background: "#70d6ff" }}>This could be chunk 2, </span><span style={{ background: "#e9ff70" }}>sometimes a chunk will change i</span><span style={{ background: "#ffd670" }}>n the middle of a sentence (this isn't great). </span><span style={{ background: "#ff9770" }}>If any chunks have overlapping text, those will appear in orange.</span></p>
-        <p><b>Chunk Size 分块大小</b>: The length (in characters) of your end chunks 您的最终分块的长度（以字符为单位）。</p>
-        <p><b>Chunk Overlap (Green) 分块重叠（绿色）</b>: The amount of overlap or cross over sequential chunks share 连续分块之间共享的重叠或交叉的数量。</p>
-        <p><b>Notes:</b> *Text splitters trim the whitespace on the end of the js, python, and markdown splitters which is why the text jumps around, *Overlap is locked at &lt;*文本分割器会修剪 js、python 和 markdown 分割器末尾的空格，这就是为什么文本会跳来跳去，*重叠被锁定在分块大小的。</p>
+        <h3 id="explanation">What's going on here?</h3>
+        <p>Language Models have context windows. This is the length of text that they can process in a single pass.<br /> Although context lengths are getting larger, it has been shown that language models increase performance on tasks when they are given less (but more relevant) information.</p>
+        <p>But which relevant subset of data do you pick? This is easy when a human is doing it by hand, but turns out it is difficult to instruct a computer to do this.</p>
+        <p>One common way to do this is by chunking, or subsetting, your large data into smaller pieces. In order to do this you need to pick a chunk strategy.</p>
+        <p>Pick different chunking strategies above to see how they impact the text, add your own text if you'd like.</p>
+        <p>You'll see different colors that represent different chunks. <span style={{ background: "#ff70a6" }}>This could be chunk 1. </span><span style={{ background: "#70d6ff" }}>This could be chunk 2, </span><span style={{ background: "#e9ff70" }}>sometimes a chunk will change i</span><span style={{ background: "#ffd670" }}>n the middle of a sentence (this isn't great). </span><span style={{ background: "#ff9770" }}>If any chunks have overlapping text, those will appear in orange.</span></p>
+        <p><b>Chunk Size</b>: The length (in characters) of your end chunks</p>
+        <p><b>Chunk Overlap (Green)</b>: The amount of overlap or cross over sequential chunks share</p>
+        <p><b>Notes:</b> *Text splitters trim the whitespace on the end of the js, python, and markdown splitters which is why the text jumps around, *Overlap is locked at &lt;50% of chunk size *Simple analytics (privacy friendly) used to understand my hosting bill.</p>
         <p>For implementations of text splitters, view LangChain
           (<a href="https://python.langchain.com/docs/modules/data_connection/document_transformers/text_splitters/character_text_splitter" target="_blank" rel="noopener noreferrer">py</a>, <a href="https://js.langchain.com/docs/modules/data_connection/document_transformers/text_splitters/character_text_splitter" target="_blank" rel="noopener noreferrer">js</a>) & Llama Index (<a href="https://docs.llamaindex.ai/en/stable/api/llama_index.node_parser.SentenceSplitter.html#llama_index.node_parser.SentenceSplitter" target="_blank" rel="noopener noreferrer">py</a>, <a href="https://ts.llamaindex.ai/modules/low_level/node_parser" target="_blank" rel="noopener noreferrer">js</a>)</p>
         <p>MIT License, <a href="https://github.com/gkamradt/ChunkViz" target="_blank" rel="noopener noreferrer">Opened Sourced</a>, PRs Welcome</p>
