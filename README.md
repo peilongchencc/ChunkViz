@@ -9,11 +9,11 @@
 ![](./docs/chartsplit.jpg)
 
 - [Chunk Viz](#chunk-viz)
-  - [安装和运行说明:](#安装和运行说明)
-    - [前提: 选择合适的nodejs:](#前提-选择合适的nodejs)
-    - [安装nodejs](#安装nodejs)
+  - [前提:](#前提)
+  - [Nodejs安装流程:](#nodejs安装流程)
     - [可能遇到的问题:](#可能遇到的问题)
-    - [Step 1: 克隆仓库](#step-1-克隆仓库)
+  - [当前项目安装流程:](#当前项目安装流程)
+    - [Step 1: 克隆本仓库](#step-1-克隆本仓库)
     - [Step 2: 安装依赖项](#step-2-安装依赖项)
     - [Step 3: 构建项目](#step-3-构建项目)
     - [Step 4: 本地运行](#step-4-本地运行)
@@ -21,17 +21,24 @@
     - [为什么增大chunk overlap会增加最终切块的数量:](#为什么增大chunk-overlap会增加最终切块的数量)
     - [结论](#结论)
 
-## 安装和运行说明:
+## 前提:
 
-### 前提: 选择合适的nodejs:
+运行本项目前，首先要保证自己系统有Nodejs 18.x以上版本。可以通过以下指令查看自己系统是否拥有Nodejs:<br>
 
-可以在nodejs的github查看自己系统的支持版本:<br>
+```bash
+node -v
+npm -v
+```
+
+如果没有Nodejs，可以在Nodejs的github查看自己系统的支持版本，然后遵循之后的步骤安装Nodejs。<br>
+
+Nodejs的github链接如下:<br>
 
 ```log
 https://github.com/nodesource/distributions
 ```
 
-例如:<br>
+系统版本与Nodejs匹配图如下:<br>
 
 ![](./docs/nodejs支持的ubuntu版本.jpg)
 
@@ -41,9 +48,9 @@ nodejs版本的维护时间可以通过下列网址查看:<br>
 https://github.com/nodejs/release?tab=readme-ov-file#release-schedule
 ```
 
-### 安装nodejs
+## Nodejs安装流程:
 
-参考以下指令，依次运行下列指令安装nodejs:<br>
+确定自己操作系统适合的Nodejs版本后，参考以下指令，依次运行下列指令安装Nodejs:<br>
 
 ```bash
 # 下载并运行NodeSource的安装脚本
@@ -89,7 +96,10 @@ v20.12.2
 
 选择`<Ok>`并确认后，系统会重启选定的服务。如果你选择`<Cancel>`，则不会重启任何服务，但是可能需要在稍后手动重启这些服务，以确保它们使用更新后的库文件。如果你不确定，建议选择重启所有服务。<br>
 
-### Step 1: 克隆仓库
+
+## 当前项目安装流程:
+
+### Step 1: 克隆本仓库
 
 ```bash
 git clone git@github.com:peilongchencc/ChunkViz.git
